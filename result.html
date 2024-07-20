@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Result</h1>
+        <div class="result">
+            <p>Positive Comments: {{ positive_count }}</p>
+            <p>Negative Comments: {{ negative_count }}</p>
+            <p>Neutral Comments: {{ neutral_count }}</p>
+            <p>Overall Sentiment: <span class="{{ overall_sentiment.lower() }}">{{ overall_sentiment }}</span></p>
+            <p>Suggestion: {{ suggestion }}</p>
+        </div>
+        <a href="/">Analyze another CSV file</a>
+    </div>
+</body>
+</html>
